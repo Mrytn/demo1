@@ -9,7 +9,7 @@ import java.io.Serializable;
 public class Person implements Serializable {
     private static final long serialVersionUID = -716266700077384042L;
     private String name;
-    private int age;
+    private int age  ;
 
     @Override
     public String toString() {
