@@ -2,6 +2,10 @@ package com.baomidou.ant.springbootmp.entity;
 
 import java.time.LocalDateTime;
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -17,9 +21,13 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
+@TableName("oa_company")
 public class OaCompany implements Serializable {
 
     private static final long serialVersionUID=1L;
+    //主键
+    @TableId(type = IdType.AUTO)
+    private Integer id;
 
     /**
      * 上级公司
@@ -54,7 +62,7 @@ public class OaCompany implements Serializable {
     /**
      * 公司负责人
      */
-    private Long managerId;
+    private Integer managerId;
 
     /**
      * 有效

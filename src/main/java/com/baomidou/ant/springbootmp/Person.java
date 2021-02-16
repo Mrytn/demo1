@@ -1,4 +1,4 @@
-package com.demo1;
+package com.baomidou.ant.springbootmp;
 
 import java.io.Serializable;
 
